@@ -13,12 +13,17 @@
   --nose-length: 6rem;
   --nose-width: 2rem;
   --nose-color: #0000ff;
+  --mouth: 5rem;
+  --mouth-height: 0.5rem;
+  --mouth-position: 10rem;
+  --mouth-color: #4C4C4C;
 }
 
 body {
   margin: 10;
   font-size: 1rem;
   display: flex;
+  flex:1;
   min-height: 100vh;
   align-items: center;
 }
@@ -87,9 +92,21 @@ body {
   margin: auto;
 }
 
+.mouth {
+  width: var(--mouth);
+  height: var(--mouth-height);
+  background-color: var(--mouth-color);
+  position: absolute;
+  top: var(--mouth-position);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 .controls {
   width: 10rem;
-  height: 20rem;
+  height: 25rem;
   border: 2px solid black;
   margin: 50px;
   position: relative;

@@ -11,6 +11,7 @@
     <div class="outline">
       <div class="eyes"></div>
       <div class="eye-balls"></div>
+      <div class="mouth"></div>
       <div class="nose"></div>
     </div>
   </div>
@@ -19,7 +20,7 @@
     <label for="face-size">Face Size:</label><br>
     <input id="face-size" type="range" name="outline-size" min="15" max="25" value="20" data-sizing="rem"><br>
     <label for="skin-color">Skin Color:</label>
-    <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br>
+    <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br><br>
 
     <label for="eyes-size">Eyes Size:</label><br>
     <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem"><br>
@@ -31,7 +32,15 @@
     <label for="nose-size">Nose Width:</label><br>
     <input id="nose-size" type="range" name="nose-width" min="1" max="5" value="2" data-sizing="rem"><br>
     <label for="nose-color">Nose Color:</label>
-    <input id="nose-color" type="color" name="nose-color" value="#0000ff"><br>
+    <input id="nose-color" type="color" name="nose-color" value="#0000ff"><br><br>
+
+    <label for="mouth-size">Mouth Size:</label><br>
+    <input id="mouth-size" type="range" name="mouth" min="5" max="20" value="5" data-sizing="rem"><br>
+    <label for="mouth-size">Mouth Position:</label><br>
+    <input id="mouth-size" type="range" name="mouth-position" min="5" max="20" value="10" data-sizing="rem"><br>
+    <label for="mouth-color">Mouth Color:</label>
+    <input id="mouth-color" type="color" name="mouth-color" value="#4C4C4C"><br>
+
   </div>
 
   <script>
@@ -47,6 +56,9 @@
         document.documentElement.style.setProperty('--eye-balls-margin-top', -this.value-2+(this.value/2)+(this.value/4) + suffix );
         document.documentElement.style.setProperty('--eye-balls-margin-left', -this.value-(this.value/4) + suffix );
         document.documentElement.style.setProperty('--eye-balls-distance', this.value*2 + suffix );
+      }
+      if( this.name === "mouth"){
+        document.documentElement.style.setProperty(`--${this.name}`+'-height', this.value/10 + suffix );
       }
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix );
     }
