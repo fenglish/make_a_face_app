@@ -22,16 +22,27 @@
 body {
   margin: 10;
   font-size: 1rem;
+  color: #ff0000;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
   display: flex;
   flex:1;
   min-height: 100vh;
   align-items: center;
 }
 
+.title {
+  font-size: 5rem;
+  color: #ff0000;
+  margin: 3rem;
+  position: relative;
+}
+
 .face{
   width: 30rem;
   height: 30rem;
   position: relative;
+  margin: 3rem;
 }
 
 .outline {
@@ -39,7 +50,6 @@ body {
   height: var(--outline-size);
   border: none;
   border-radius:50%;
-  padding: 2rem;
   background-color: var(--outline-color);
   position: absolute;
   top: 0;
@@ -105,11 +115,15 @@ body {
 }
 
 .controls {
-  width: 10rem;
-  height: 25rem;
-  border: 2px solid black;
-  margin: 50px;
+  width: 200px;
+  height: auto;
+  border: 3px solid #ff0000;
   position: relative;
-  padding: 2rem;
+  padding: 20px;
+  border-radius: 10px;
+}
 
+.category {
+  font-size: 1.5rem;
+  font-weight: 700;
 }

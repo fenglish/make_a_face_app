@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Play with Face APP</title>
+  <title>MAKE -A- FACE APP</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
 </head>
 <body>
+
+  <div class="title">
+    MAKE<br>
+    - A -<br>
+    FACE
+  </div>
 
   <div class="face">
     <div class="outline">
@@ -17,28 +24,32 @@
   </div>
 
   <div class="controls">
-    <label for="face-size">Face Size:</label><br>
+    <div class="category">FACE</div>
+    <label for="face-size">Size:&nbsp;</label>
     <input id="face-size" type="range" name="outline-size" min="15" max="25" value="20" data-sizing="rem"><br>
-    <label for="skin-color">Skin Color:</label>
+    <label for="skin-color">Color:</label>
     <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br><br>
 
-    <label for="eyes-size">Eyes Size:</label><br>
+    <div class="category">EYES</div>
+    <label for="eyes-size">Size:&nbsp;</label>
     <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem"><br>
-    <label for="eyes-color">Eyes Color:</label>
+    <label for="eyes-color">Color:</label>
     <input id="skin-color" type="color" name="eyes-color" value="#ff0000"><br><br>
 
-    <label for="nose-size">Nose Length:</label><br>
+    <div class="category">NOSE</div>
+    <label for="nose-size">Length:</label>
     <input id="nose-size" type="range" name="nose-length" min="5" max="15" value="6" data-sizing="rem"><br>
-    <label for="nose-size">Nose Width:</label><br>
+    <label for="nose-size">Width:&nbsp;&nbsp;</label>
     <input id="nose-size" type="range" name="nose-width" min="1" max="5" value="2" data-sizing="rem"><br>
-    <label for="nose-color">Nose Color:</label>
+    <label for="nose-color">Color:&nbsp;&nbsp;&nbsp;</label>
     <input id="nose-color" type="color" name="nose-color" value="#0000ff"><br><br>
 
-    <label for="mouth-size">Mouth Size:</label><br>
+    <div class="category">MOUTH</div>
+    <label for="mouth-size">Size:&nbsp;&nbsp;&nbsp;&nbsp;</label>
     <input id="mouth-size" type="range" name="mouth" min="5" max="20" value="5" data-sizing="rem"><br>
-    <label for="mouth-size">Mouth Position:</label><br>
+    <label for="mouth-size">Height:</label>
     <input id="mouth-size" type="range" name="mouth-position" min="5" max="20" value="10" data-sizing="rem"><br>
-    <label for="mouth-color">Mouth Color:</label>
+    <label for="mouth-color">Color:&nbsp;&nbsp;</label>
     <input id="mouth-color" type="color" name="mouth-color" value="#4C4C4C"><br>
 
   </div>
