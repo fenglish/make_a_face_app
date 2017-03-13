@@ -5,7 +5,12 @@
   --eyes-distance: 4rem;
   --eyes-margin-top: -3rem;
   --eyes-margin-left: -3rem;
-  --eyes-color: #ffffff;
+  --eyes-color: #ff0000;
+  --eye-balls: 1rem;
+  --eye-balls-distance: 4rem;
+  --eye-balls-margin-top: -2.5rem;
+  --eye-balls-margin-left: -2.5rem;
+
 }
 
 body {
@@ -42,14 +47,29 @@ body {
   height: var(--eyes);
   border: none;
   border-radius: 50%;
-  background-color: var(--eyes-color);
-  box-shadow: var(--eyes-distance) 0px 0px 0px var(--eyes-color);
+  background-color: white;
+  box-shadow: var(--eyes-distance) 0px 0px 0px white;
   position: absolute;
   top: 50%;
   left:50%;
   right: 50%;
   bottom: 50%;
   margin: var(--eyes-margin-top) 0 0 var(--eyes-margin-left);
+}
+
+.eye-balls {
+  width: var(--eye-balls);
+  height: var(--eye-balls);
+  border: none;
+  border-radius: 50%;
+  background-color: var(--eyes-color);
+  box-shadow: var(--eye-balls-distance) 0px 0px 0px var(--eyes-color);
+  position: absolute;
+  top: 50%;
+  left:50%;
+  right: 50%;
+  bottom: 50%;
+  margin: var(--eye-balls-margin-top) 0 0 var(--eye-balls-margin-left);
 }
 
 .controls {

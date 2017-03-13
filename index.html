@@ -10,18 +10,19 @@
   <div class="face">
     <div class="outline">
       <div class="eyes"></div>
+      <div class="eye-balls"></div>
     </div>
   </div>
   <div class="controls">
     <label for="face-size">Face Size:</label><br>
-    <input id="face-size" type="range" name="outline-size" min="20" max="25" value="20" data-sizing="rem">
+    <input id="face-size" type="range" name="outline-size" min="20" max="25" value="20" data-sizing="rem"><br><br>
     <label for="skin-color">Skin Color:</label><br>
-    <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br>
+    <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br><br>
 
     <label for="eyes-size">Eyes Size:</label><br>
-    <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem">
+    <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem"><br><br>
     <label for="eyes-color">Eyes Color:</label><br>
-    <input id="skin-color" type="color" name="eyes-color" value="#ffffff"><br>
+    <input id="skin-color" type="color" name="eyes-color" value="#ff0000"><br><br>
   </div>
 
   <script>
@@ -33,6 +34,10 @@
         document.documentElement.style.setProperty(`--${this.name}`+'-margin-top', -this.value-2+(this.value/2) + suffix );
         document.documentElement.style.setProperty(`--${this.name}`+'-margin-left', -this.value-(this.value/2) + suffix );
         document.documentElement.style.setProperty(`--${this.name}`+'-distance', this.value*2 + suffix );
+        document.documentElement.style.setProperty('--eye-balls', this.value/2 + suffix );
+        document.documentElement.style.setProperty('--eye-balls-margin-top', -this.value-2+(this.value/2)+(this.value/4) + suffix );
+        document.documentElement.style.setProperty('--eye-balls-margin-left', -this.value-(this.value/4) + suffix );
+        document.documentElement.style.setProperty('--eye-balls-distance', this.value*2 + suffix );
       }
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix );
     }
