@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Play with Face APP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="face">
+    <div class="outline"></div>
+  </div>
+  <div class="controls">
+    <label for="face-size">Face Size:</label>
+    <input id="face-size" type="range" name="outline-size" min="15" max="25" data-sizing="rem">
+  </div>
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix );
+      console.log(this.value)
+    }
+    inputs.forEach( function( element ){
+      element.addEventListener('change', handleUpdate );
+      element.addEventListener('mousemove', handleUpdate );
+    });
+  </script>
+
+</body>
+</html>
