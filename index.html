@@ -30,12 +30,11 @@
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
       if( this.name === "eyes" ){
-        document.documentElement.style.setProperty(`--${this.name}`+'-margin-top', -this.value + suffix );
+        document.documentElement.style.setProperty(`--${this.name}`+'-margin-top', -this.value-2+(this.value/2) + suffix );
         document.documentElement.style.setProperty(`--${this.name}`+'-margin-left', -this.value-(this.value/2) + suffix );
         document.documentElement.style.setProperty(`--${this.name}`+'-distance', this.value*2 + suffix );
       }
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix );
-      console.log(this.value)
     }
     inputs.forEach( function( element ){
       element.addEventListener('change', handleUpdate );
