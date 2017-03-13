@@ -10,7 +10,9 @@
   --eye-balls-distance: 4rem;
   --eye-balls-margin-top: -2.5rem;
   --eye-balls-margin-left: -2.5rem;
-
+  --nose-length: 6rem;
+  --nose-width: 2rem;
+  --nose-color: #0000ff;
 }
 
 body {
@@ -70,6 +72,19 @@ body {
   right: 50%;
   bottom: 50%;
   margin: var(--eye-balls-margin-top) 0 0 var(--eye-balls-margin-left);
+}
+
+.nose {
+	width: 0;
+	height: 0;
+	border: var(--nose-width) solid transparent;
+	border-bottom: var(--nose-length) solid var(--nose-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: var(--nose-width);
+  margin: auto;
 }
 
 .controls {
