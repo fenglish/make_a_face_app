@@ -1,6 +1,11 @@
 :root {
   --outline-size: 20rem;
   --outline-color: #a3ff3f;
+  --eyes: 2rem;
+  --eyes-distance: 4rem;
+  --eyes-margin-top: -2rem;
+  --eyes-margin-left: -3rem;
+  --eyes-color: #ffffff;
 }
 
 body {
@@ -30,6 +35,21 @@ body {
   right: 0;
   bottom: 0;
   margin: auto;
+}
+
+.eyes {
+  width: var(--eyes);
+  height: var(--eyes);
+  border: none;
+  border-radius: 50%;
+  background-color: var(--eyes-color);
+  box-shadow: var(--eyes-distance) 0px 0px 0px var(--eyes-color);
+  position: absolute;
+  top: 50%;
+  left:50%;
+  right: 50%;
+  bottom: 50%;
+  margin: var(--eyes-margin-top) 0 0 var(--eyes-margin-left);
 }
 
 .controls {
