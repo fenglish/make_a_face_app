@@ -24,33 +24,41 @@
   </div>
 
   <div class="controls">
-    <div class="category">FACE</div>
-    <label for="face-size">Size:&nbsp;</label>
-    <input id="face-size" type="range" name="outline-size" min="15" max="25" value="20" data-sizing="rem"><br>
-    <label for="skin-color">Color:</label>
-    <input id="skin-color" type="color" name="outline-color" value="#a3ff3f"><br><br>
 
-    <div class="category">EYES</div>
-    <label for="eyes-size">Size:&nbsp;</label>
-    <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem"><br>
-    <label for="eyes-color">Color:</label>
-    <input id="skin-color" type="color" name="eyes-color" value="#ff0000"><br><br>
+      <div class="category">FACE</div>
+        <label for="outline-size">Size:&nbsp;</label>
+        <input id="outline-size" type="range" name="outline-size" min="15" max="25" value="20" data-sizing="rem"><br>
 
-    <div class="category">NOSE</div>
-    <label for="nose-size">Length:</label>
-    <input id="nose-size" type="range" name="nose-length" min="5" max="15" value="6" data-sizing="rem"><br>
-    <label for="nose-size">Width:&nbsp;&nbsp;</label>
-    <input id="nose-size" type="range" name="nose-width" min="1" max="5" value="2" data-sizing="rem"><br>
-    <label for="nose-color">Color:&nbsp;&nbsp;&nbsp;</label>
-    <input id="nose-color" type="color" name="nose-color" value="#0000ff"><br><br>
+        <label for="outline-color">Color:</label>
+        <input id="outline-color" type="color" name="outline-color" value="#a3ff3f"><br><br>
 
-    <div class="category">MOUTH</div>
-    <label for="mouth-size">Size:&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input id="mouth-size" type="range" name="mouth" min="5" max="20" value="5" data-sizing="rem"><br>
-    <label for="mouth-size">Height:</label>
-    <input id="mouth-size" type="range" name="mouth-position" min="5" max="20" value="10" data-sizing="rem"><br>
-    <label for="mouth-color">Color:&nbsp;&nbsp;</label>
-    <input id="mouth-color" type="color" name="mouth-color" value="#4C4C4C"><br>
+      <div class="category">EYES</div>
+        <label for="eyes-size">Size:&nbsp;</label>
+        <input id="eyes-size" type="range" name="eyes" min="2" max="6" value="2" data-sizing="rem"><br>
+
+        <label for="eyes-color">Color:</label>
+        <input id="eyes-color" type="color" name="eyes-color" value="#ff0000"><br><br>
+
+      <div class="category">NOSE</div>
+        <label for="nose-size">Length:</label>
+        <input id="nose-size" type="range" name="nose-length" min="5" max="15" value="6" data-sizing="rem"><br>
+
+        <label for="nose-size">Width:&nbsp;&nbsp;</label>
+        <input id="nose-size" type="range" name="nose-width" min="1" max="5" value="2" data-sizing="rem"><br>
+
+        <label for="nose-color">Color:&nbsp;&nbsp;&nbsp;</label>
+        <input id="nose-color" type="color" name="nose-color" value="#0000ff"><br><br>
+
+      <div class="category">MOUTH</div>
+        <label for="mouth-size">Size:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input id="mouth-size" type="range" name="mouth" min="5" max="20" value="5" data-sizing="rem"><br>
+
+        <label for="mouth-size">Height:</label>
+        <input id="mouth-size" type="range" name="mouth-position" min="5" max="20" value="10" data-sizing="rem"><br>
+
+        <label for="mouth-color">Color:&nbsp;&nbsp;</label>
+        <input id="mouth-color" type="color" name="mouth-color" value="#4C4C4C"><br>
+
   </div>
 
   <script>
@@ -59,16 +67,16 @@
     function handleUpdate() {
       const suffix = this.dataset.sizing || '';
       if( this.name === "eyes" ){
-        document.documentElement.style.setProperty(`--${this.name}`+'-margin-top', -this.value-2+(this.value/2) + suffix );
-        document.documentElement.style.setProperty(`--${this.name}`+'-margin-left', -this.value-(this.value/2) + suffix );
-        document.documentElement.style.setProperty(`--${this.name}`+'-distance', this.value*2 + suffix );
-        document.documentElement.style.setProperty('--eye-balls', this.value/2 + suffix );
-        document.documentElement.style.setProperty('--eye-balls-margin-top', -this.value-2+(this.value/2)+(this.value/4) + suffix );
-        document.documentElement.style.setProperty('--eye-balls-margin-left', -this.value-(this.value/4) + suffix );
-        document.documentElement.style.setProperty('--eye-balls-distance', this.value*2 + suffix );
+        document.documentElement.style.setProperty('--eyes-margin-top', ( -this.value ) - 2 + ( this.value / 2 ) + suffix );
+        document.documentElement.style.setProperty('--eyes-margin-left', ( -this.value ) - ( this.value / 2 ) + suffix );
+        document.documentElement.style.setProperty('--eyes-distance', this.value * 2 + suffix );
+        document.documentElement.style.setProperty('--eye-balls', this.value / 2 + suffix );
+        document.documentElement.style.setProperty('--eye-balls-margin-top', ( -this.value ) - 2 + ( this.value / 2 ) + ( this.value / 4 ) + suffix );
+        document.documentElement.style.setProperty('--eye-balls-margin-left', ( -this.value ) - ( this.value / 4 ) + suffix );
+        document.documentElement.style.setProperty('--eye-balls-distance', this.value * 2 + suffix );
       }
       if( this.name === "mouth"){
-        document.documentElement.style.setProperty(`--${this.name}`+'-height', this.value/10 + suffix );
+        document.documentElement.style.setProperty('--mouth-height', this.value / 10 + suffix );
       }
       document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix );
     }
